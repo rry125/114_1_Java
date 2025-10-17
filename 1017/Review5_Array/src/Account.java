@@ -1,21 +1,31 @@
 // 帳戶類別，包含基本存提款功能
 public class Account {
+    private String ownerName; // 帳戶持有人姓名
+    private static int accountCount = 0; // 帳戶總數
+    private String accountNumber; // 帳戶號碼
     private double balance; // 帳戶餘額
-    private String AccountNumber; // 帳戶號碼
+
 
     /**
      * 建構子，初始化帳戶號碼與餘額
      * @param accountNumber 帳戶號碼
      * @param initialBalance 初始餘額
      */
-    public Account(String accountNumber, double initialBalance) {
+    public Account(String accountNumber,String owenerName,double initialBalance) {
         this.setAccountNumber(accountNumber);
+        this.ownerName = owenerName;
         try{
             this.setBalance(initialBalance);
         } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-            }
+            System.out.println("初始餘額錯誤：" + e.getMessage() +  "，餘額設為零。");
         }
+        accountCount++;
+    }
+
+    public static int getAccountCount() {
+        return accountCount;
+    }
+
 
     /**
      * 取得帳戶號碼
@@ -33,11 +43,14 @@ public class Account {
         return balance;
     }
 
+    public  String getOwnerName() {
+        return ownerName;
+    }
     /**
      * 存款
      * @param amount 存款金額，必須大於零
      */
-    public void deposit(double amount) {
+   public void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
         } else {
@@ -55,6 +68,6 @@ public class Account {
             balance -= amount;
         } else {
             throw new IllegalArgumentException("提款金額無效或超過餘額。");
-        }
+       }
     }
 }
