@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/src/Magican.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/Magican.java" />
+              <option name="originalContent" value="public class Magican extends  Role {&#10;&#10;    private int healPower;&#10;&#10;    public Magican(String name, int health, int magicPower, int healPower) {&#10;        super(name, health, magicPower);&#10;        this.healPower = healPower;&#10;    }&#10;&#10;    public int getHealPower() {&#10;        return healPower;&#10;    }&#10;&#10;    public void attack(Magican opponent) {&#10;        opponent.setHealth(opponent.getHealth() - this.getAttackPower());&#10;        System.out.println(this.getName() + &quot; casts a spell on &quot; + opponent.getName() + &quot; for &quot; + this.getAttackPower() + &quot; damage.&quot;);&#10;    }&#10;&#10;&#10;    private void heal(SwordsMan ally){&#10;        ally.setHealth(ally.getHealth() + this.healPower);&#10;        System.out.println(this.getName() + &quot; heals &quot; + ally.getName() + &quot; for &quot; + this.healPower + &quot; health.&quot;);&#10;    }&#10;    &#10;}&#10;" />
+              <option name="updatedContent" value="public class Magican extends  Role {&#10;&#10;    private final int healPower;&#10;&#10;    public Magican(String name, int health, int magicPower, int healPower) {&#10;        super(name, health, magicPower);&#10;        this.healPower = healPower;&#10;    }&#10;&#10;    public int getHealPower() {&#10;        return healPower;&#10;    }&#10;&#10;    public void attack(Magican opponent) {&#10;        opponent.setHealth(opponent.getHealth() - this.getAttackPower());&#10;        System.out.println(this.getName() + &quot; casts a spell on &quot; + opponent.getName() + &quot; for &quot; + this.getAttackPower() + &quot; damage.&quot;);&#10;    }&#10;&#10;&#10;    private void heal(SwordsMan ally){&#10;        ally.setHealth(ally.getHealth() + this.healPower);&#10;        System.out.println(this.getName() + &quot; heals &quot; + ally.getName() + &quot; for &quot; + this.healPower + &quot; health.&quot;);&#10;    }&#10;    &#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

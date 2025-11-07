@@ -33,6 +33,8 @@ public class AccountTest {
                     String accNum = scanner.nextLine();
                     System.out.print("輸入持有人名稱: ");
                     String ownerName = scanner.nextLine();
+                    System.out.print("輸入身分證字號：");
+                    String ownerID = scanner.nextLine();
                     System.out.print("輸入初始餘額: ");
                     double initialBalance = scanner.nextDouble();
                     Account newAccount = new Account(accNum, ownerName, initialBalance);
